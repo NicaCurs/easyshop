@@ -1,0 +1,665 @@
+/* Body and font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #fffafa, #ffe5e5); /* snowy background */
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  background: #b71c1c; /* deep red */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ffeb3b; /* festive yellow on hover */
+  transition: 0.3s;
+}
+
+/* Page content */
+.page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-header {
+  font-size: 2.2rem;       /* bigger than normal */
+  font-weight: bold;
+  color: #b71c1c;          /* festive red */
+  background: linear-gradient(90deg, #ffeb3b, #f44336); /* yellow→red gradient */
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;    /* shrink-wrap to text */
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px #2e7d32; /* subtle green glow */
+}
+
+/* Cart header (matches page headers) */
+.page-header {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #b71c1c; /* festive red */
+  background: linear-gradient(90deg, #ffeb3b, #f44336);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px #2e7d32;
+}
+
+/* Quantity controls in cart */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quantity-controls button {
+  width: 28px;
+  height: 28px;
+  background-color: #fafafa; /* festive red */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.quantity-controls button:hover {
+  background-color: #2e7d32; /* festive green */
+}
+
+.quantity-controls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Quantity controls container */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Quantity buttons (+ and -) */
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: normal; /* not bold */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 0; /* prevents wide buttons */
+}
+
+/* Minus button hover (red) */
+.qty-btn.minus:hover {
+  background-color: #c62828;
+  color: white;
+  border-color: #c62828;
+}
+
+/* Plus button hover (green) */
+.qty-btn.plus:hover {
+  background-color: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+}
+
+/* Quantity number */
+.qty-number {
+  min-width: 24px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+/* Cart footer total */
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ffeb3b; /* festive divider */
+}
+
+.checkout-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #2e7d32;
+}
+
+
+/* Cart items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Single cart item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff3e0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Product image in cart */
+.cart-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+/* Product info */
+.cart-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.cart-info p {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* Remove button */
+.remove-btn {
+  margin-left: auto;
+  padding: 0.4rem 0.8rem;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Cart footer with total and checkout */
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.checkout-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #2e7d32;
+}
+
+
+/* Home page welcome section */
+.home-page {
+  position: relative;
+  overflow: hidden; /* for snowflakes */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Animated gradient background for welcome box */
+.animated-welcome {
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(270deg, #b71c1c, #2e7d32, #ffeb3b, #b71c1c);
+  background-size: 800% 800%;
+  animation: gradientMove 12s ease infinite;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Glowing animated heading */
+.animated-welcome h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 8px #fffacd, 0 0 10px #ffeb3b;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Subtext styling */
+.animated-welcome .subtext {
+  color: #fff8dc;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 5px #ffeb3b;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Gradient movement animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Text glow animation */
+@keyframes glow {
+  0% { text-shadow: 2px 2px 8px #fffacd, 0 0 10px #ffeb3b; }
+  100% { text-shadow: 2px 2px 12px #ffeb3b, 0 0 20px #fffacd; }
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #b71c1c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.music-btn:hover {
+  background-color: #2e7d32;
+  transform: scale(1.1);
+}
+
+
+/* Boxed View Details button */
+.view-details {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.5rem; /* space from product price */
+  background-color: #ff9800; /* festive orange */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.view-details:hover {
+  background-color: #ffc107; /* lighter orange on hover */
+}
+
+
+/* Grid for products */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+/* Product card */
+.card {
+  border: 2px solid #b71c1c;
+  border-radius: 15px;
+  padding: 1rem;
+  background: #fff0f0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  color: #b71c1c; /* festive red */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Buttons inside ProductCard */
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.view-details-btn,
+.add-to-cart-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.view-details-btn {
+  background-color: #ff9800; /* festive orange */
+  color: white;
+}
+
+.view-details-btn:hover {
+  background-color: #ffc107; /* lighter orange on hover */
+}
+
+.add-to-cart-btn {
+  background-color: #b71c1c; /* red */
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2e7d32; /* Christmas green */
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  object-fit: cover;
+  height: 180px; /* makes all images uniform size */
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #2e7d32; /* Christmas green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #81c784; /* lighter green on hover */
+}
+
+.page button:first-of-type {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.page button:first-of-type:hover {
+  background-color: #42a5f5; /* lighter blue on hover */
+}
+
+/* Go Back button inside the white content area */
+.go-back {
+  display: inline-block; /* not absolute */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #b71c1c; /* festive red */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 1rem; /* space below button */
+}
+
+.go-back:hover {
+  background-color: #2e7d32; /* Christmas green on hover */
+  color: #fffacd; /* soft yellow text */
+  transform: scale(1.05);
+}
+
+
+
+/* Links inside cards */
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #b71c1c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #ffeb3b;
+}
+
+/* Footer */
+.footer {
+  background: #b71c1c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+/* Add Christmas snow effect */
+@keyframes snow {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(100vh); }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 1rem;
+  color: white;
+  z-index: 9999;
+  animation: snow linear infinite;
+}
+
+/* Navbar logo style */
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer; /* user knows it's clickable */
+  color: #b71c1c; /* festive red */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #b71c1c; /* red box */
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar .logo:hover {
+  background-color: #2e7d32; /* green on hover */
+}
+
+.purchase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.purchase-item {
+  background-color: #fff3e0; /* soft festive yellow */
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Product image and name above the box */
+.product-image-top {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 2rem auto 1rem auto; /* centered with some space */
+}
+
+.product-name-top {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b71c1c; /* festive red */
+  margin-bottom: 1.5rem;
+}
+
+/* Box for product details */
+.product-details-box {
+  max-width: 400px;
+  margin: 0 auto 3rem auto; /* centered */
+  padding: 1.5rem;
+  background-color: #fff8f0; /* light festive cream */
+  border: 2px solid #b71c1c;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Product price inside box */
+.product-details-box .product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e7d32; /* festive green */
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.product-details-box .product-description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Add to Cart button inside box */
+.product-details-box .add-to-cart-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.product-details-box .add-to-cart-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Go Back button inside box */
+.product-details-box .go-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-details-box .go-back:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* Container for buttons: left and right aligned */
+.product-buttons {
+  display: flex;
+  justify-content: space-between; /* leftmost and rightmost */
+  margin-top: 1rem;
+}
+
+/* Buttons styling: smaller, clean, tight to text */
+.product-buttons button {
+  flex: none; /* do not stretch */
+  padding: 0.4rem 0.4rem; /* smaller padding for compact look */
+  border-radius: 2px; /* slightly rounded */
+  font-weight: bold;
+  font-size: 0.75rem; /* smaller, professional font */
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow for depth */
+
+}
+
+/* Go Back button */
+.product-buttons .go-back {
+  background-color: #053d0a; /* festive orange */
+  color: white;
+  border: none;
+}
+
+.product-buttons .go-back:hover {
+  background-color: #ff0707; /* lighter orange on hover */
+  transform: scale(1.05);
+}
+
+/* Add to Cart button */
+.product-buttons .add-to-cart-btn {
+  background-color: #b71c1c; /* festive red */
+  color: white;
+  border: none;
+}
+
+.product-buttons .add-to-cart-btn:hover {
+  background-color: #2e7d32; /* festive green on hover */
+  transform: scale(1.05);
+}
+
+
+
+
